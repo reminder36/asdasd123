@@ -186,6 +186,18 @@ local function teleportEnemies()
     end
 end
 
+local function checkToggle()
+    if Toggle.Value then
+        print("Teleportation enabled.")
+        teleportEnemies()
+    else
+        print("Teleportation disabled.")
+    end
+end
+
+Toggle:OnChanged(checkToggle)
+checkToggle()
+
     local Tabs = {
         Main = Window:AddTab({ Title = "AUTO BUY", Icon = "store" }),
     }
