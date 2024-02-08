@@ -204,43 +204,6 @@ local humanoidRootPart = player.Character:WaitForChild("HumanoidRootPart")
 
 local workspace = game:GetService("Workspace")
 local spawnersFolder = workspace:FindFirstChild("spawners")
-local huecomundoFolder = spawnersFolder and spawnersFolder:FindFirstChild("hueco mundo")
-
-local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "HUECO MUNDO MAP", Default = false })
-
-local function teleportEnemies()
-    if huecomundoFolder then
-        for _, enemyPart in pairs(huecomundoFolder:GetChildren()) do
-            if enemyPart:IsA("Part") then
-                -- Teleport to the position of each enemy part
-                humanoidRootPart.CFrame = CFrame.new(enemyPart.Position + Vector3.new(0, 5, 0)) -- Teleport 5 studs above the enemy
-                -- You can adjust the teleportation position as needed
-                wait(1.5)  -- Add a delay between teleports (adjust as needed)
-            end
-        end
-    else
-        warn("komoha folder not found in Spawners.")
-    end
-end
-
-local function checkToggle()
-    if Toggle.Value then
-        print("Teleportation enabled.")
-        teleportEnemies()
-    else
-        print("Teleportation disabled.")
-    end
-end
-
-Toggle:OnChanged(checkToggle)
-checkToggle()
-
-local Players = game:GetService("Players")
-local player = Players.LocalPlayer
-local humanoidRootPart = player.Character:WaitForChild("HumanoidRootPart")
-
-local workspace = game:GetService("Workspace")
-local spawnersFolder = workspace:FindFirstChild("spawners")
 local sariuhFolder = spawnersFolder and spawnersFolder:FindFirstChild("sariuh")
 
 local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "SARIUH MAP", Default = false })
@@ -346,79 +309,6 @@ end
 Toggle:OnChanged(checkToggle)
 checkToggle()
 
-local Players = game:GetService("Players")
-local player = Players.LocalPlayer
-local humanoidRootPart = player.Character:WaitForChild("HumanoidRootPart")
-
-local workspace = game:GetService("Workspace")
-local spawnersFolder = workspace:FindFirstChild("spawners")
-local darkcloverFolder = spawnersFolder and spawnersFolder:FindFirstChild("dark clover")
-
-local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "DARK CLOVER MAP", Default = false })
-
-local function teleportEnemies()
-    if darkcloverFolder then
-        for _, enemyPart in pairs(darkcloverFolder:GetChildren()) do
-            if enemyPart:IsA("Part") then
-                -- Teleport to the position of each enemy part
-                humanoidRootPart.CFrame = CFrame.new(enemyPart.Position + Vector3.new(0, 5, 0)) -- Teleport 5 studs above the enemy
-                -- You can adjust the teleportation position as needed
-                wait(1.5)  -- Add a delay between teleports (adjust as needed)
-            end
-        end
-    else
-        warn("komoha folder not found in Spawners.")
-    end
-end
-
-local function checkToggle()
-    if Toggle.Value then
-        print("Teleportation enabled.")
-        teleportEnemies()
-    else
-        print("Teleportation disabled.")
-    end
-end
-
-Toggle:OnChanged(checkToggle)
-checkToggle()
-
-local Players = game:GetService("Players")
-local player = Players.LocalPlayer
-local humanoidRootPart = player.Character:WaitForChild("HumanoidRootPart")
-
-local workspace = game:GetService("Workspace")
-local spawnersFolder = workspace:FindFirstChild("spawners")
-local titanattackFolder = spawnersFolder and spawnersFolder:FindFirstChild("titan attack")
-
-local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "TITAN ATTACK MAP", Default = false })
-
-local function teleportEnemies()
-    if titanattackFolder then
-        for _, enemyPart in pairs(titanattackFolder:GetChildren()) do
-            if enemyPart:IsA("Part") then
-                -- Teleport to the position of each enemy part
-                humanoidRootPart.CFrame = CFrame.new(enemyPart.Position + Vector3.new(0, 5, 0)) -- Teleport 5 studs above the enemy
-                -- You can adjust the teleportation position as needed
-                wait(1.5)  -- Add a delay between teleports (adjust as needed)
-            end
-        end
-    else
-        warn("komoha folder not found in Spawners.")
-    end
-end
-
-local function checkToggle()
-    if Toggle.Value then
-        print("Teleportation enabled.")
-        teleportEnemies()
-    else
-        print("Teleportation disabled.")
-    end
-end
-
-Toggle:OnChanged(checkToggle)
-checkToggle()
 
     local Tabs = {
         Main = Window:AddTab({ Title = "AUTO BUY", Icon = "store" }),
